@@ -1,0 +1,12 @@
+.sTbl{
+    margin-top: 15%;
+    text-align: center;
+}
+#studentTable tr td{
+    margin-top: 10px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    width: 200px;
+    text-align: center;
+}

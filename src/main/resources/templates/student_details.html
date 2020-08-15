@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thong tin sinh vien</title>
+
+    <link rel="stylesheet" th:href="@{/public/css/student_details.css}">
+    <link rel="stylesheet" th:href="@{/public/bootstrap/bootstrap.min.css}">
+    <script th:src="@{/public/bootstrap/bootstrap.min.js}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!--    <script th:src="@{/public/bootstrap/jquery.min.js}"></script>-->
+    <script th:src="@{/public/bootstrap/popper.min.js}"></script>
+</head>
+<body>
+    <h1>Thong tin sinh vien</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <form th:action="@{/student-detail}" th:object="${student}" method="post">
+                    <table>
+                        <tr>
+                            <td class="td1">MSV :</td>
+                            <td class="td2"><input class="inpForm" type="text" th:field="*{id}"></td>
+                        </tr>
+                        <tr>
+                            <td class="td1">Ho va ten :</td>
+                            <td class="td2"><input class="inpForm" type="text" th:field="*{name}"></td>
+                        </tr>
+                        <tr>
+                            <td class="td1">Lop :</td>
+                            <td class="td2"><input class="inpForm" type="text" th:field="*{classDTO.name}"></td>
+                        </tr>
+                        <tr>
+                            <td class="td1">Que quan :</td>
+                            <td class="td2"><input class="inpForm" type="text" th:field="*{country}"></td>
+                        </tr>
+                        <tr>
+                            <td class="td1">Ngay sinh :</td>
+                            <td class="td2"><input class="inpForm" type="text" th:field="*{doB}"></td>
+                        </tr>
+                        <tr>
+                            <td class="td1">Diem TB :</td>
+                            <td class="td2"><input class="inpForm" type="text" th:field="*{average}"></td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="Cap nhat">
+                </form>
+            </div>
+            <div class="col-md-6">
+                <a href="/qlsvApp/student-detail/"></a>
+            </div>
+        </div>
+    </div>
+    <a href="/qlsvApp/" style="color: red">Quay lai trang chu</a>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Them sinh vien</title>
+
+    <link rel="stylesheet" th:href="@{/public/css/list_student.css}">
+    <link rel="stylesheet" th:href="@{/public/bootstrap/bootstrap.min.css}">
+    <script th:src="@{/public/bootstrap/bootstrap.min.js}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!--    <script th:src="@{/public/bootstrap/jquery.min.js}"></script>-->
+    <script th:src="@{/public/bootstrap/popper.min.js}"></script>
+</head>
+
+<body>
+<h1>Them moi sinh vien</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+
+            <form action="" method="post">
+                <div>
+                    <label>Khoa</label><br>
+                    <select name="department" id="dprt">
+                        <option value="0">------------------</option><br>
+                    </select>
+                </div>
+                <div>
+                    <label>Lop</label><br>
+                    <select name="class" id="clss">
+                        <option value="0">------------------</option><br>
+                    </select>
+                </div>
+                <div>
+                    <label>Ten</label><br>
+                    <input type="text" name="name"/><br>
+                </div>
+                <div>
+                    <label>Que quan</label><br>
+                    <input type="text" name="country"/><br>
+                </div>
+                <div>
+                    <label>Ngay sinh</label><br>
+                    <input type="text" name="doB"/><br>
+                </div>
+                <div>
+                    <label>Diem trung binh</label><br>
+                    <input type="text" name="average"/><br>
+                </div>
+                <p>
+                    <br>
+                    <button id="btn">Submit</button>
+                </p>
+            </form>
+
+        </div>
+        <div class="col-md-6">
+            <a href="/qlsvApp/student-detail/"></a>
+        </div>
+    </div>
+</div>
+<a href="/qlsvApp/" style="color: red">Quay lai trang chu</a>
+<script th:src="@{/public/js/formToJson.js}"></script>
+<script th:src="@{/public/js/add_student.js}"></script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sach sinh vien</title>
+
+    <link rel="stylesheet" th:href="@{/public/css/list_student.css}">
+    <link rel="stylesheet" th:href="@{/public/bootstrap/bootstrap.min.css}">
+    <script th:src="@{/public/bootstrap/bootstrap.min.js}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!--    <script th:src="@{/public/bootstrap/jquery.min.js}"></script>-->
+    <script th:src="@{/public/bootstrap/popper.min.js}"></script>
+</head>
+
+<body>
+<h2>Danh sach sinh vien</h2>
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <h3>Chon khoa</h3>
+            <form id="departmentForm">
+                <select name="department" id="dprt">
+                    <option value="0">------------------</option>
+                </select>
+            </form>
+        </div>
+        <div class="col-md-5">
+            <h3>Chon Lop hoc</h3>
+            <form id="classForm">
+                <select name="class" id="clss">
+                    <option value="0">------------------</option>
+                </select>
+            </form>
+        </div>
+        <div class="col-md-2">
+            <br>
+            <button id="btnSubmit">Tìm kiếm</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="sTbl">
+                <table id="studentTable">
+                    <tr>
+                        <td>Ma sinh vien</td>
+                        <td>Ho va Ten</td>
+                        <td>Que quan</td>
+                        <td>Ngay sinh</td>
+                        <td>Diem trung binh</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+        
+    </div>
+    
+</div>
+<a href="/qlsvApp/" style="color: red">Quay lai trang chu</a>
+
+<script th:src="@{/public/js/list_student.js}"></script>
+</body>
+
+</html>

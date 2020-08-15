@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sach sinh vien</title>
+
+    <link rel="stylesheet" th:href="@{/public/css/list_student.css}">
+    <link rel="stylesheet" th:href="@{/public/bootstrap/bootstrap.min.css}">
+    <script th:src="@{/public/bootstrap/bootstrap.min.js}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!--    <script th:src="@{/public/bootstrap/jquery.min.js}"></script>-->
+    <script th:src="@{/public/bootstrap/popper.min.js}"></script>
+</head>
+
+<body>
+<h2>Xoa Lop hoc</h2>
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <h3>Chon khoa</h3>
+            <form id="departmentForm">
+                <select name="department" id="dprt">
+                    <option value="0">------------------</option>
+                </select>
+            </form>
+        </div>
+        <div class="col-md-5">
+            <h3>Chon Lop hoc</h3>
+            <form id="classForm">
+                <select name="class" id="clss">
+                    <option value="0">------------------</option>
+                </select>
+            </form>
+        </div>
+        <div class="col-md-2">
+            <br>
+            <button id="btn">Xoá</button>
+        </div>
+    </div>
+</div>
+<a href="/qlsvApp/" style="color: red">Quay lai trang chu</a>
+
+<script th:src="@{/public/js/delete_class.js}"></script>
+</body>
+
+</html>
